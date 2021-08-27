@@ -6,10 +6,15 @@
         <p id="demo1"></p>
     </body>
     <script>
-        const name = 'name'
+        const name = 'josdfllsdf'
         const person = {
             name,
         };
+
+        console.log(Object.prototype.hasOwnProperty.call(person, "name"));
+        console.log(Object.prototype.hasOwnProperty.call(person, "name"));
+        console.log(Object.prototype.hasOwnProperty.call(person, "name"));
+        console.log(person.hasOwnProperty("name"));
         document.getElementById('demo').innerHTML = person.name;
         
     </script>
