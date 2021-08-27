@@ -2,29 +2,15 @@
 <html>
     <head> </head>
     <body>
-        <p id="demo"></p>
+        <h1 id="demo"></h1>
         <p id="demo1"></p>
     </body>
     <script>
+        const name = 'name'
         const person = {
-            firstName: "john",
-            lastName: "doe",
-            fullName() {
-                return this.firstName + this.lastName;
-            } 
-        }
-
-        console.log(person.fullName())
-
-
-
-        // const atom = {
-        //     value: 1,
-        //     addValue(value) {
-        //         return this.value + value;
-        //     },
-        // }
-        // console.log(atom.addValue(5))
-
+            name,
+        };
+        document.getElementById('demo').innerHTML = person.name;
+        
     </script>
 </html>
