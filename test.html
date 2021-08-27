@@ -6,15 +6,10 @@
         <p id="demo1"></p>
     </body>
     <script>
-        const name = "josdfllsdf";
-        const person = {
-            name,
-        };
+        const arrLike = {0:'foo',1:'bar',2:'baz',length:3}
+        const arr = Array.from(arrLike);
 
 
-        const original = { a:1, b:2};
-        const copy = {...original, c:3};
-        console.log(copy);
-        document.getElementById("demo").innerHTML = person.name;
+        document.getElementById("demo").innerHTML = arr[1];
     </script>
 </html>
