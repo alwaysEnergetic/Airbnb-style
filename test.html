@@ -6,13 +6,25 @@
         <p id="demo1"></p>
     </body>
     <script>
-        const atom = {
-            value: 1,
-            addValue(value) {
-                return this.value + value;
-            },
+        const person = {
+            firstName: "john",
+            lastName: "doe",
+            fullName() {
+                return this.firstName + this.lastName;
+            } 
         }
-        console.log(atom.addValue(5))
+
+        console.log(person.fullName())
+
+
+
+        // const atom = {
+        //     value: 1,
+        //     addValue(value) {
+        //         return this.value + value;
+        //     },
+        // }
+        // console.log(atom.addValue(5))
 
     </script>
 </html>
