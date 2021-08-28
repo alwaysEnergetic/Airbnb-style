@@ -6,15 +6,12 @@
         <p id="demo1"></p>
     </body>
     <script>
-
-        const person = {
-            firstName: "sdf",
-            lastName: "dsdfdf",
-            getFullName() {
-                const { firstName, lastName } = this;
-                return `${firstName} ${lastName}`;
-            }
+        let test;
+        if (true) {
+            test = () => {
+                console.log("Yup.");
+            };
         }
-        document.getElementById('demo').innerHTML = person.getFullName();
+        test()
     </script>
 </html>
