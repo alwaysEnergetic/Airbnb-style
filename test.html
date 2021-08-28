@@ -6,10 +6,15 @@
         <p id="demo1"></p>
     </body>
     <script>
-        const arrLike = {0:'foo',1:'bar',2:'baz',length:3}
-        const arr = Array.from(arrLike);
+        let chm = [
+            [0, 1],
+            [2, 3],
+            [4, 5],
+        ].reduce((acc, item, index) => {
+            const flatten = acc.concat(item);
+            return flatten;
+        });
+        console.log(chm);
 
-
-        document.getElementById("demo").innerHTML = arr[1];
     </script>
 </html>
