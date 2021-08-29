@@ -7,34 +7,22 @@
     </body>
 
     <script>
-        const odd = [1, 2, 3];
-        let copy = [...odd];
-        copy = [...odd, 4];
-        console.log(copy);
-        console.log(odd);
-        [...copy].map((value) => {
-            console.log( value*2); 
-        });
-
-        const concat = [...odd,...copy];
-        console.log(concat)
-
-        const person = {
-            firstName: "john",
-            lastName: "doe",
-            fullName() {
-                return this.firstName + this.lastName;
-            }
+        function f1(obj) {
+            obj.height = 1;
         }
+   
+       const obj = {
+           height: 2,
+           weight: 1,
+       };
+       f1(obj);
+       console.log(obj)
 
-        const copyPerson = {...person}
-        console.log(copyPerson)
-
-        const sum = (s1,s2,s3) => {
-            return s1 + s2 + s3;
+       function f2(obj) {
+           const weight = Object.prototype.hasOwnProperty.call(obj,'weight') ? 10 : obj.weight;
+            console.log(weight)
         }
-
-        console.log(sum(...odd));
-
+       f2(obj);
+       console.log(weight)
     </script>
 </html>
