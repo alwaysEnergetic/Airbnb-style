@@ -7,14 +7,34 @@
     </body>
 
     <script>
-       const numbers = [1,2,3,4,5];
-        let result = [];
-       const incre = numbers.filter((value, index, array) => {
-               return value;
-       });
-       const copy = [...incre].map((value) => {
-           return value * 2
-       });
-       console.log(copy)
-</script>
+        const odd = [1, 2, 3];
+        let copy = [...odd];
+        copy = [...odd, 4];
+        console.log(copy);
+        console.log(odd);
+        [...copy].map((value) => {
+            console.log( value*2); 
+        });
+
+        const concat = [...odd,...copy];
+        console.log(concat)
+
+        const person = {
+            firstName: "john",
+            lastName: "doe",
+            fullName() {
+                return this.firstName + this.lastName;
+            }
+        }
+
+        const copyPerson = {...person}
+        console.log(copyPerson)
+
+        const sum = (s1,s2,s3) => {
+            return s1 + s2 + s3;
+        }
+
+        console.log(sum(...odd));
+
+    </script>
 </html>
