@@ -5,13 +5,16 @@
         <h1 id="demo"></h1>
         <p id="demo1"></p>
     </body>
+
     <script>
-        let test;
-        if (true) {
-            test = () => {
-                console.log("Yup.");
-            };
-        }
-        test()
-    </script>
+       const numbers = [1,2,3,4,5];
+        let result = [];
+       const incre = numbers.filter((value, index, array) => {
+               return value;
+       });
+       const copy = [...incre].map((value) => {
+           return value * 2
+       });
+       console.log(copy)
+</script>
 </html>
