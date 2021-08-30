@@ -7,22 +7,20 @@
     </body>
 
     <script>
-        function f1(obj) {
-            obj.height = 1;
-        }
-   
-       const obj = {
-           height: 2,
-           weight: 1,
-       };
-       f1(obj);
-       console.log(obj)
+        const itemHeight = (item) => {
+            const { height, largeSize, smallSize } = item;
+            return height <= 256 ? largeSize : smallSize;
+        };
 
-       function f2(obj) {
-           const weight = Object.prototype.hasOwnProperty.call(obj,'weight') ? 10 : obj.weight;
-            console.log(weight)
+
+        const item = {
+            height: 400,
+            largeSize: "that is too big",
+            smallSize: "too small!"
         }
-       f2(obj);
-       console.log(weight)
+
+
+        const string1 = itemHeight(item);
+        console.log(string1)
     </script>
 </html>
