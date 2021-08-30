@@ -7,20 +7,31 @@
     </body>
 
     <script>
-        const itemHeight = (item) => {
-            const { height, largeSize, smallSize } = item;
-            return height <= 256 ? largeSize : smallSize;
-        };
-
-
-        const item = {
-            height: 400,
-            largeSize: "that is too big",
-            smallSize: "too small!"
+        class Queue {
+            constructor(contents = []) {
+                this.queue = [...contents];
+            }
+            pop() {
+                const value = this.queue[0];
+                this.queue.splice(0,1);
+                return value;
+            }
+            push(x) {
+                const value = x;
+                this.queue.push(x);
+                return this.queue.length;
+            }
+        }
+        
+        class newFeature extends Queue {
+            peek() {
+                return this.queue[3];
+            }
         }
 
+        const ABC = new newFeature([12,214,345,465,567,76,45]);
 
-        const string1 = itemHeight(item);
-        console.log(string1)
-    </script>
+
+         console.log(ABC.peek());
+       </script>
 </html>
