@@ -7,31 +7,28 @@
     </body>
 
     <script>
-        class Queue {
-            constructor(contents = []) {
-                this.queue = [...contents];
-            }
-            pop() {
-                const value = this.queue[0];
-                this.queue.splice(0,1);
-                return value;
-            }
-            push(x) {
-                const value = x;
-                this.queue.push(x);
-                return this.queue.length;
-            }
-        }
-        
-        class newFeature extends Queue {
-            peek() {
-                return this.queue[3];
-            }
-        }
+        const person = {
+            name: 'sdf',
+            city: [
+                    {
+                        street: 'sdfds',
+                    },
+                    {
+                        liveAddress: 'sdrwer',
+                    }    
+            ],
+            height: 123,
+            weight: 234,
+        }    
+        const person1 = {...person, position: 'position'};
+        const person2 = {...person, position: 'ssdlfk'};
+        console.log(person1, person2)
 
-        const ABC = new newFeature([12,214,345,465,567,76,45]);
+        //console.log({...person, city:{...person.city, liveAddress: "Guang chenges street"}});
+        console.log({...person, city:{...person.city, liveAddress: 'Guang chenges street'}});
 
-
-         console.log(ABC.peek());
-       </script>
+        let personCity = {...person.city};
+        personCity[1].liveAddress = 'changed';
+        console.log(person);
+    </script>
 </html>
